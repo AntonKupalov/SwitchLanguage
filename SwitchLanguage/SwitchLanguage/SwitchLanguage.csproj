@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Localization\SwitchLanguage.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SwitchLanguage.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Localization\SwitchLanguage.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SwitchLanguage.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Localization\SwitchLanguage.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SwitchLanguage.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Localization\SwitchLanguage.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SwitchLanguage.en.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>
